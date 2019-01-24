@@ -1,0 +1,7 @@
+Most common ways for jail breaking in python
+1.Most of the python jail may be implemented in eval() function and hence in order to crack we exploit use of eval.
+Eg:(1)
+Usage
+	eval('1+3') gives output 4
+	eval("os.system('ls')") gives listing provided import os is there in jail script and if not then eval("__import__('os').system('ls')")
+	Sometimes regex is deployed to catch attempt to execute remote commands.So to bypass these we use chr() to evalute i.e eval(chr(95)+.....+chr	     (?)) where chr is the representation of the __import__('os').system('ls')
